@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SportBetApp.Services.Contracts
 {
-    interface IEventService
+    public interface IEventService
     {
     }
 }

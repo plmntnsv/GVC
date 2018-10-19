@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SportBetApp.Services;
+using SportBetApp.Services.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +10,16 @@ namespace SportBetApp.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEventService eventService;
+
+        public HomeController(IEventService eventService)
+        {
+            this.eventService = eventService;
+        }
+
         public ActionResult Index()
         {
+
             return View();
         }
 
