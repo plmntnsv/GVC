@@ -75,6 +75,14 @@
     <Compile Include="UnityConfiguration\ServiceConfig.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SportBetApp.Data.Models\SportBetApp.Data.Models.csproj">
+      <Project>{3C01780D-545C-47C4-A685-BD0EFBB345F6}</Project>
+      <Name>SportBetApp.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SportBetApp.DTO\SportBetApp.DTO.csproj">
+      <Project>{A52D70C8-F2ED-490E-A877-44E83242E35A}</Project>
+      <Name>SportBetApp.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SportBetApp.Repository\SportBetApp.Repository.csproj">
       <Project>{CD6F8672-08D9-4733-BD56-352CAD092C34}</Project>
       <Name>SportBetApp.Repository</Name>

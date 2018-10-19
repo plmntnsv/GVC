@@ -1,12 +1,13 @@
-﻿using System;
+﻿using SportBetApp.Data.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SportBetApp.Repository.Contracts
 {
     public interface IEventRepository
     {
+        IEnumerable<Event> GetAll();
+        void Add(Event modelToAdd);
+        void Edit(Event modelToEdit);
+        void Delete(int id);
     }
 }

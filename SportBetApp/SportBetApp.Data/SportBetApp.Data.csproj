@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\ISportBetAppDbContext.cs" />
     <Compile Include="Migrations\201810191952456_Initial.cs" />
     <Compile Include="Migrations\201810191952456_Initial.Designer.cs">
       <DependentUpon>201810191952456_Initial.cs</DependentUpon>
