@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportBetApp.Repository
+namespace SportBetApp.Repository.Contracts
 {
-    public class Class1
+    interface IEventRepository
     {
     }
 }

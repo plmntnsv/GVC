@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportBetApp.Common
+namespace SportBetApp.Services
 {
-    public class Class1
+    class EventService
     {
     }
 }
