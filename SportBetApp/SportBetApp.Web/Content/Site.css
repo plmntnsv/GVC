@@ -7,6 +7,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    margin-top:100px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -21,4 +22,29 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/* My Styles */
+.events-table tbody tr:nth-child(odd) {
+    background-color: aliceblue;
+}
+
+.events-table tbody tr:nth-child(even) {
+    background-color: honeydew;
+}
+
+.events-table tbody tr.passed-event {
+    background-color: lightsalmon;
+}
+
+.content-right{
+    text-align:right;
+}
+
+.add-btn-padding {
+    padding: 10px;
+}
+
+.no-padding{
+    padding:0;
 }

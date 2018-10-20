@@ -13,9 +13,9 @@ namespace SportBetApp.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
-                        OddsForFirstTeam = c.Double(nullable: false),
-                        OddsForDraw = c.Double(nullable: false),
-                        OddsForSecondTeam = c.Double(nullable: false),
+                        OddsForFirstTeam = c.Double(),
+                        OddsForDraw = c.Double(),
+                        OddsForSecondTeam = c.Double(),
                         StartDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);

@@ -21,8 +21,8 @@ namespace SportBetApp.Data.Models
         [Range(1, double.MaxValue, ErrorMessage ="Odd must be bigger than 1")]
         public double? OddsForSecondTeam { get; set; }
 
-        [Required]
-        [DisplayFormat(ApplyFormatInEditMode =true,DataFormatString ="{0:dd/MM/yyyy HH:mm}")]
+        //[Required]
+        //[DisplayFormat(ApplyFormatInEditMode =true,DataFormatString ="{0:dd/MM/yyyy HH:mm}")]
         public DateTime StartDate { get; set; }
     }
 }

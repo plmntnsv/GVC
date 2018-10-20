@@ -19,7 +19,7 @@ namespace SportBetApp.Repository
             this.context = context;
         }
 
-        public void Add(Event modelToAdd)
+        public Event Add(Event modelToAdd)
         {
             if (modelToAdd == null)
             {
@@ -28,6 +28,8 @@ namespace SportBetApp.Repository
 
             this.context.Events.Add(modelToAdd);
             SaveChanges();
+
+            return modelToAdd;
         }
 
         public void Delete(int id)

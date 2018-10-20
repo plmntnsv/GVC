@@ -17,24 +17,20 @@ namespace SportBetApp.Services
             this.eventRepository = eventRepository;
         }
 
-        public void Add(EventDto modelToAdd)
+        public EventDto Add()
         {
-            if (modelToAdd == null)
-            {
-                throw new ArgumentNullException("Provided model cannot be null!");
-            }
-
             var model = new Event()
             {
-                Id = modelToAdd.Id,
-                Name = modelToAdd.Name,
-                OddsForFirstTeam = modelToAdd.OddsForFirstTeam,
-                OddsForDraw = modelToAdd.OddsForDraw,
-                OddsForSecondTeam = modelToAdd.OddsForSecondTeam,
-                StartDate = modelToAdd.StartDate
+                StartDate = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day, 23, 59, 00)
             };
 
-            this.eventRepository.Add(model);
+            var returnedEvent = this.eventRepository.Add(model);
+
+            return new EventDto()
+            {
+                Id = returnedEvent.Id,
+                StartDate = returnedEvent.StartDate
+            };
         }
 
         public void Delete(int id)

@@ -1,0 +1,107 @@
+﻿@using SportBetApp.Web.Models
+@using System.Globalization
+@model List<EventViewModel>
+
+@{
+    ViewBag.Title = "Edit";
+}
+@Html.AntiForgeryToken()
+<div class="row content-right">
+    @Html.ActionLink("Preview Mode", "Index", null, new { @class = "btn btn-default add-btn-padding" })
+</div>
+@Html.ValidationSummary()
+<div class="row">
+    <table class="table" id="edit-events-table">
+        <thead>
+            <tr>
+                <th>
+                    EventId
+                </th>
+                <th>
+                    EventName
+                </th>
+                <th>
+                    OddsForFirstTeam
+                </th>
+                <th>
+                    OddsForDraw
+                </th>
+                <th>
+                    OddsForSecondTeam
+                </th>
+                <th>
+                    EventStartDate
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ev in @Model)
+            {
+                <tr class="event-row-@ev.Id">
+                    <td>
+                        <p class="event-id">@ev.Id</p>
+                    </td>
+                    <td>
+                        @if (ev.Name != null)
+                        {
+                            <input type="text" value="@ev.Name" class="event-name-input" />
+                        }
+                        else
+                        {
+                            <input type="text" class="event-name-input" />
+                        }
+
+                    </td>
+                    <td>
+                        @if (ev.OddsForFirstTeam != null)
+                        {
+                            <input type="text" class="event-oddsforfirstteam-input" value="@ev.OddsForFirstTeam.Value.ToString("0.00")" />
+                        }
+                        else
+                        {
+                            <input type="text" class="event-oddsforfirstteam-input" />
+                        }
+                    </td>
+                    <td>
+                        @if (ev.OddsForDraw != null)
+                        {
+                            <input type="text" class="event-oddsfordraw-input" value="@ev.OddsForDraw.Value.ToString("0.00")" />
+                        }
+                        else
+                        {
+                            <input type="text" class="event-oddsfordraw-input" />
+                        }
+                    </td>
+                    <td>
+                        @if (ev.OddsForSecondTeam != null)
+                        {
+                            <input type="text" class="event-oddsforsecondteam-input" value="@ev.OddsForSecondTeam.Value.ToString("0.00")" />
+                        }
+                        else
+                        {
+                            <input type="text" class="event-oddsforsecondteam-input" />
+                        }
+                    </td>
+                    <td>
+                        <input type="text" value="@ev.StartDate.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture)" class="event-startdate-input" />
+                    </td>
+                    <td>
+                        <button class="btn btn-primary no-padding event-save" data-id="@ev.Id">Save</button>
+                        <button class="btn btn-danger no-padding event-delete" data-id="@ev.Id">Delete</button>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<div class="row">
+    <button class = "btn btn-default add-btn-padding" id="event-add">Add New Event</button>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/Scripts/edit-event-logic.js")
+}

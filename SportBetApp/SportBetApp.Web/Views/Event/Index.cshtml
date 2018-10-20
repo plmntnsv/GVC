@@ -1,0 +1,78 @@
+﻿@using SportBetApp.Web.Models
+@model IEnumerable<EventViewModel>
+
+@{
+    ViewBag.Title = "Events";
+}
+
+<div class="row content-right">
+    @Html.ActionLink("Edit Mode", "Edit", null, new { @class = "btn btn-default add-btn-padding" })
+</div>
+<div class="row">
+    <table class="table events-table">
+        <thead>
+            <tr>
+                <th>
+                    EventName
+                </th>
+                <th>
+                    OddsForFirstTeam
+                </th>
+                <th>
+                    OddsForDraw
+                </th>
+                <th>
+                    OddsForSecondTeam
+                </th>
+                <th>
+                    EventStartDate
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ev in Model)
+            {
+                if (ev.StartDate < DateTime.Now)
+                {
+                    @Html.Raw("<tr class=\"passed-event\">");
+                }
+                else
+                {
+                    @Html.Raw("<tr>");
+                }
+
+                @Html.Hidden($"preview-event-id", ev.Id.ToString(), new { @class = "preview-event-id" });
+            <td>
+                @ev.Name
+            </td>
+            <td class="event-preview-odd">
+                @if (ev.OddsForFirstTeam != null)
+                {
+                    @ev.OddsForFirstTeam.Value.ToString("0.00")
+                }
+            </td>
+            <td class="event-preview-odd">
+                @if (ev.OddsForDraw != null)
+                {
+                    @ev.OddsForDraw.Value.ToString("0.00")
+                }
+            </td>
+            <td class="event-preview-odd">
+                @if (ev.OddsForSecondTeam != null)
+                {
+                    @ev.OddsForSecondTeam.Value.ToString("0.00")
+                }
+            </td>
+            <td>
+                @ev.StartDate.ToString("dd/MM/yyyy HH:mm")
+            </td>
+
+            @Html.Raw("</tr>");
+        }
+            </tbody>
+        </table>
+    </div>
+
+    @section Scripts{
+        @Scripts.Render("~/Scripts/preview-event-logic.js")
+    }

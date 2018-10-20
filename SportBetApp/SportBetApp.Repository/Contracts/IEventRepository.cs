@@ -6,7 +6,7 @@ namespace SportBetApp.Repository.Contracts
     public interface IEventRepository
     {
         IEnumerable<Event> GetAll();
-        void Add(Event modelToAdd);
+        Event Add(Event modelToAdd);
         void Edit(Event modelToEdit);
         void Delete(int id);
     }

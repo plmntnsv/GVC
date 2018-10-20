@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.Services", "Spo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.Repository", "SportBetApp.Repository\SportBetApp.Repository.csproj", "{CD6F8672-08D9-4733-BD56-352CAD092C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.UnitTests", "SportBetApp.UnitTests\SportBetApp.UnitTests.csproj", "{E182778A-421F-4F00-9446-D81857D417EB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.DTO", "SportBetApp.DTO\SportBetApp.DTO.csproj", "{A52D70C8-F2ED-490E-A877-44E83242E35A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.Data.Models", "SportBetApp.Data.Models\SportBetApp.Data.Models.csproj", "{3C01780D-545C-47C4-A685-BD0EFBB345F6}"
@@ -18,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.Common", "SportBetApp.Common\SportBetApp.Common.csproj", "{4DD6CDA0-CC33-415E-8B9C-9489B88F6C10}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.Web", "SportBetApp.Web\SportBetApp.Web.csproj", "{B1F3892E-FE05-4586-987F-CA0FC207B109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportBetApp.UnitTests", "SportBetApp.UnitTests\SportBetApp.UnitTests.csproj", "{152CF9FB-807A-4C79-9EF0-C3604B2E09DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,6 @@ Global
 		{CD6F8672-08D9-4733-BD56-352CAD092C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD6F8672-08D9-4733-BD56-352CAD092C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD6F8672-08D9-4733-BD56-352CAD092C34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E182778A-421F-4F00-9446-D81857D417EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E182778A-421F-4F00-9446-D81857D417EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E182778A-421F-4F00-9446-D81857D417EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E182778A-421F-4F00-9446-D81857D417EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A52D70C8-F2ED-490E-A877-44E83242E35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A52D70C8-F2ED-490E-A877-44E83242E35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A52D70C8-F2ED-490E-A877-44E83242E35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{B1F3892E-FE05-4586-987F-CA0FC207B109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F3892E-FE05-4586-987F-CA0FC207B109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F3892E-FE05-4586-987F-CA0FC207B109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{152CF9FB-807A-4C79-9EF0-C3604B2E09DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{152CF9FB-807A-4C79-9EF0-C3604B2E09DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{152CF9FB-807A-4C79-9EF0-C3604B2E09DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{152CF9FB-807A-4C79-9EF0-C3604B2E09DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

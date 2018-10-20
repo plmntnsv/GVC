@@ -1,0 +1,28 @@
+﻿@using System.Globalization
+@model SportBetApp.Web.Models.EventViewModel
+
+<tr class="event-row-@Model.Id">
+    <td>
+        <p class="event-id">@Model.Id</p>
+    </td>
+    <td>
+            <input type="text" class="event-name-input" />
+
+    </td>
+    <td>
+            <input type="text" class="event-oddsforfirstteam-input" />
+    </td>
+    <td>
+            <input type="text" class="event-oddsfordraw-input" />
+    </td>
+    <td>
+            <input type="text" class="event-oddsforsecondteam-input" />
+    </td>
+    <td>
+        <input type="text" value="@Model.StartDate.ToString("dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture)" class="event-startdate-input" />
+    </td>
+    <td>
+        <button class="btn btn-primary no-padding event-save" data-id="@Model.Id">Save</button>
+        <button class="btn btn-danger no-padding event-delete" data-id="@Model.Id">Delete</button>
+    </td>
+</tr>

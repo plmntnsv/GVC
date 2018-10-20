@@ -48,16 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201810191952456_Initial.cs" />
-    <Compile Include="Migrations\201810191952456_Initial.Designer.cs">
-      <DependentUpon>201810191952456_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201810200649055_Initial.cs" />
+    <Compile Include="Migrations\201810200649055_Initial.Designer.cs">
+      <DependentUpon>201810200649055_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SportBetAppDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -67,8 +69,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201810191952456_Initial.resx">
-      <DependentUpon>201810191952456_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201810200649055_Initial.resx">
+      <DependentUpon>201810200649055_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

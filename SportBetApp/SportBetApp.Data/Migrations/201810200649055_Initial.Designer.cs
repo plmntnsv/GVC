@@ -13,7 +13,7 @@ namespace SportBetApp.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201810191952456_Initial"; }
+            get { return "201810200649055_Initial"; }
         }
         
         string IMigrationMetadata.Source
